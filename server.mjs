@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const puppeteer = require('puppeteer');
 
-createServer async (req, res) => {
+createServer (req, res) => {
   try {
     const browser = await puppeteer.launch({ headless: true });
     const page = await browser.newPage();
